@@ -16,7 +16,6 @@ class ChatClient
         client = new TcpClient("127.0.0.1", 8888);
         stream = client.GetStream();
 
-        // Отправка имени пользователя
         SendMessage(username);
 
         Thread receiveThread = new Thread(ReceiveMessages);
